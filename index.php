@@ -4,6 +4,6 @@
         tworz_tytul_html('');
         //    wyswietl_menu_uzyt();
         logowanie();
-        stopka_rej();
+         stopka_rej();
 ?>
     
