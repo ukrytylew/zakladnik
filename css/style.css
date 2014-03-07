@@ -1,0 +1,42 @@
+a:hover,a,a:active{
+  color:green;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;}
+.test {
+   margin-top: 0;
+   background-color: black;
+   color: white;
+   font-size:  38px;
+   font-family:  sans-serif;
+   font-weight: 900;
+   font-family: cursive;
+  
+}
+#small{
+    font-weight: 3px; 
+}
+.tlo{
+    background-color: black;
+}
+.bialaCzcionka{
+    color:white;
+    font-family: cursive;
+    
+}
+.czarnaCzcionka{
+    color: black;
+    font-family: cursive;
+    
+}
+.tlo2{
+    background-color: white;
+}
+.fox{
+    height: 90px;
+}
