@@ -62,7 +62,7 @@ catch(PDOException $e)
     echo $e->getMessage();
     }
      
-   
+    zalogowanyJako();
 }
 
 
@@ -72,10 +72,15 @@ catch(PDOException $e)
         {
             echo '<br/> uzytkownik zalogowany jako '.$_SESSION['user'].'<br/>'.' o nazwisku: '. $_SESSION['name'];
             echo '<a href="wyloguj.php">wyloguj</a>';
-        }
+            
+            tworz_naglowek_html('hejka ');
+        
+        tworz_stopke_html();
+        }            
+        
         else
         {
-            if(isset($login)&&isset($haslo))
+            if(!isset($login)||!isset($haslo))
             {
                 echo'logowanie niemozliwe' ;
             }
@@ -84,11 +89,9 @@ catch(PDOException $e)
             {
                 echo 'uzytkownik niezalogowany';
             }
+        
         }
         }
-        tworz_naglowek_html('hejka ');
-        zalogowanyJako();
-        tworz_stopke_html();
      
         ?>
        

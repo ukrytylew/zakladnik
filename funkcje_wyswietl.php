@@ -47,6 +47,15 @@
                         <div class="col-md-7">
                          <small>
                              <h3>
+                                 <?php 
+                                 if(isset($_SESSION['user']))
+        {
+                                     echo $_SESSION['user'];
+         //   echo'uzytkownik zalogowany jako '.$_SESSION['p'].'<br/>';
+            echo '<br/><a href = "wyloguj.php">wyloguj</a>';
+        }
+        else {echo'';}
+                                 ?>
                              Okup będzie słony....<br/>
                              </h3>
                          </small>
@@ -106,7 +115,7 @@
             function wyswietl_form_rej()
             {
         ?>
-        <form class="form-horizontal" role="form" action="nowa_rejestracja.php" method="post">
+        <form class="form-horizontal" role="form" action="rejestration.php" method="post">
   <div class="form-group">
     <label for="inputEmail3" class="col-md-2 control-label" >Email</label>
     <div class="col-md-9">
