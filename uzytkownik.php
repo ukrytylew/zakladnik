@@ -71,7 +71,8 @@ catch(PDOException $e)
         if(isset($_SESSION['user']))
         {
             echo '<br/> uzytkownik zalogowany jako '.$_SESSION['user'].'<br/>'.' o nazwisku: '. $_SESSION['name'];
-            echo '<a href="wyloguj.php">wyloguj</a>';
+            echo '<a href="wyloguj.php">wyloguj</a><br/>';
+            echo '<a href="showBookmarks.php">zakladki</a>';
             
             tworz_naglowek_html('hejka ');
         

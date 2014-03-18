@@ -6,5 +6,6 @@
   require_once('funkcje_wyswietl.php');
    require_once('funkcje_bazy.php');
     require_once('funkcje_url.php');
+     require_once('showBookmarks.php');
 ?>
 
