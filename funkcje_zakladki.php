@@ -4,8 +4,8 @@
   require_once('funkcje_prawid_dane.php'); 
   require_once('funkcje_uwierz.php');
   require_once('funkcje_wyswietl.php');
-   require_once('funkcje_bazy.php');
-    require_once('funkcje_url.php');
-     require_once('showBookmarks.php');
+  require_once('funkcje_bazy.php');
+  require_once('funkcje_url.php');
+  //require_once('sMarks.php');
 ?>
 

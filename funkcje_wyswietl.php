@@ -51,7 +51,7 @@
                                  if(isset($_SESSION['user']))
         {
                                      echo $_SESSION['user'];
-         //   echo'uzytkownik zalogowany jako '.$_SESSION['p'].'<br/>';
+          // echo'uzytkownik zalogowany jako '.$_SESSION[''].'<br/>';
             echo '<br/><a href = "wyloguj.php">wyloguj</a>';
         }
         else {echo'';}
@@ -85,6 +85,35 @@
         ?>
         <?php
             }
+            function showMarksP1(){
+            ?>
+               <table class="table table-hover">
+                   
+                       
+                       <?php 
+                       }
+                       function marks($marks){ ?>
+                       <tr>
+                       <td><?php echo $marks; ?></td><td><input type="checkbox"></td>
+                       </tr>
+                       <?php
+                       }
+                       ?>
+                       <?php
+                         function showMarksP2(){
+                             ?>
+                     
+               </table>
+            <button type="submit" class="btn btn-danger">Usuń mnie</button>
+        <?php
+            }
+            function welcomeUser($welcomeUser){
+        ?>
+        <button type="button" class="btn btn-default"><?php echo $welcomeUser; ?></button>
+      
+
+        <?php
+            }
         function stopka_rej()
         {
         
@@ -95,6 +124,9 @@
                     <a href="rejestracja.php">
                          Zarejestruj mnie tak...
                          <small>
+                            <?php
+                            
+                            ?>
                              <h3>
                              nawet gdy nie będę chciał.
                              </h3>
@@ -146,7 +178,7 @@
       <input type="password" class="form-control" id="inputPassword3" name="haslo2" placeholder="Password">
     </div
     <div class="col-md-1">
-    </div>>
+    </div>
   </div>
   <div class="form-group">
     <div class="col-md-offset-2 col-md-10">
@@ -266,6 +298,7 @@
             function wyswietl_zapomnij_form()
             {
         ?>
+        
         <?php
             }
             function logowanie()
@@ -324,6 +357,13 @@
   }
 ?>
   </table>
+     
+ 
 <?php
+
 }
 ?>
+
+     
+
+     
