@@ -72,10 +72,10 @@ catch(PDOException $e)
         if(isset($_SESSION['user']))
         {
            // echo '<br/> uzytkownik zalogowany jako '.$_SESSION['user'].'<br/>'.' o nazwisku: '. $_SESSION['name'];
-            echo '<a href="wyloguj.php">wyloguj</a><br/>';
-            echo '<a href="showBookmarks.php">zakladki<br/></a>';
+          //  echo '<a href="wyloguj.php">wyloguj</a><br/>';
+           // echo '<a href="showBookmarks.php">zakladki<br/></a>';
             $user=$_SESSION['user'];
-            echo $_SESSION['user'];
+         //   echo $_SESSION['user'];
           
             
         }            
@@ -95,7 +95,7 @@ catch(PDOException $e)
         
         }
      
-    tworz_naglowek_html('hejka ');
+   showBand();
     welcomeUser($_SESSION['user']);
     tworz_stopke_html();
     

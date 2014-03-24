@@ -1,9 +1,12 @@
 <?php
 session_start();
-
+    
 require_once ('funkcje_zakladki.php');
-//if(isset($_SESSION['user'])){
-$login=$_SESSION['user'];
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+showBand();
 $hostname = 'localhost';
 
 /*** mysql username ***/
@@ -24,33 +27,13 @@ try {
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //$login = $_POST['iduzytkownika'];
-    
+  $stmt = $dbh-> exec('INSERT INTO `zakladka`  VALUES ( 
+                                \''.$_SESSION['user'].'\',
+				\''.$_POST['addressURL'].'\')');
 
-    /*** prepare the SQL statement ***/
-    $stmt = $dbh->prepare("SELECT * FROM zakladka WHERE nazwa_uz = :login ");
-
-    /*** bind the paramaters ***/
-    $stmt->bindParam(':login', $login, PDO::PARAM_STR);
-
-    /*** execute the prepared statement ***/
-    $stmt->execute();
-
-    /*** fetch the results ***/
-    $result = $stmt->fetchAll();
-    // echo '<br/>'.$login.'<br/>';
-    showBand();
-     showMarksP1();
-    foreach($result as $row)
-       
-    {
-       // echo $row['URL_zak'].'<br />';
-       // echo $row['nazwisko'];
-      marks($row['URL_zak']);
   
-    
-    }
   
-    showMarksP2();
+    //showMarksP2();
     /*** close the database connection ***/
     $dbh = null;
 }
@@ -61,5 +44,4 @@ catch(PDOException $e)
 //}
 
 tworz_stopke_html();
-
 ?>

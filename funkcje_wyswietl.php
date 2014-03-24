@@ -52,11 +52,11 @@
         {
                                      echo $_SESSION['user'];
           // echo'uzytkownik zalogowany jako '.$_SESSION[''].'<br/>';
-            echo '<br/><a href = "wyloguj.php">wyloguj</a>';
+           
         }
         else {echo'';}
                                  ?>
-                             Okup będzie słony....<br/>
+                             okup będzie słony....<br/>
                              </h3>
                          </small>
                          </div>
@@ -66,8 +66,6 @@
                 </div>
             </div>
         <h2>
-        <?php echo $tytul;
-        ?>
         </h2>
         <?php
              }
@@ -93,8 +91,10 @@
                        <?php 
                        }
                        function marks($marks){ ?>
+                   <form method="post" action="delete.php" >
                        <tr>
-                       <td><?php echo $marks; ?></td><td><input type="checkbox"></td>
+                       <td><?php echo $marks; ?></td>
+                       <td><input type="radio" name="markDelete" value="<?php  echo $marks; ?>"></td>
                        </tr>
                        <?php
                        }
@@ -105,6 +105,7 @@
                      
                </table>
             <button type="submit" class="btn btn-danger">Usuń mnie</button>
+            </form>
         <?php
             }
             function welcomeUser($welcomeUser){
@@ -152,7 +153,7 @@
     <label for="inputEmail3" class="col-md-2 control-label" >Email</label>
     <div class="col-md-9">
       <input type="text" class="form-control" id="inputlogin" name="email" placeholder="Email">
-    </div>
+     </div>
     <div class="col-md-1">
     </div>
   </div>
@@ -357,10 +358,73 @@
   }
 ?>
   </table>
+    <?php }
+    function insert(){   
+    ?>
      
- 
-<?php
+     <form class="form-inline" method="post" action="enter.php">
+  <div class="form-group">
+    <label class="sr-only" for="addressURL">Wprowadź adres zakładki</label>
+    <input type="text" class="form-control" id="addressURLx" name="addressURL" placeholder="Enter URL address">
+  </div>
+            <div class="form-group">
+      <button type="submit" class="btn btn-default">Enter</button>
+  
+  </div>
+  </form>
+     
+     
+ <?php }
+ function showBand()  { //wyswietlanie naglowka html
 
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link href="bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet" media="screen">
+         <link href="css/style.css" rel="stylesheet" media="screen">
+        <title><?php echo $tytul; ?></title>
+    </head>
+    <body>
+        
+         <div class="page-header">
+                <div class="container-fluid tlo">
+                    <div class="row">
+                        <h1 class="test bialaCzcionka">
+                            Zakładnik <br/>
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                         <small>
+                             <h3>
+                                 <?php 
+                                 if(isset($_SESSION['user']))
+        {
+                                     echo $_SESSION['user'];
+          // echo'uzytkownik zalogowany jako '.$_SESSION[''].'<br/>';
+           
+        }
+        else {echo'';}
+                                 ?>
+                             okup będzie słony....<br/>
+                             </h3>
+                         </small>
+                         </div>
+                        <div class="col-md-5">
+                            <ul class="nav nav-pills">
+  <li><a href="showBookmarks.php">Show bookmarks</a></li>
+  <li><a href="insertBookmarks.php">Insert new bookmarks</a></li>
+  <li><a href="recomendation.php">Recomendation</a></li>
+  <li><a href="wyloguj.php">Log out</a></li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <?php       
 }
 ?>
 
